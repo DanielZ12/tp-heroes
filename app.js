@@ -3,7 +3,7 @@ const path = require('path');
 const app = express()
 const port = 3030
 
-//app.use(express.static('public'))
+app.use(express.static('public'))
 
 
 app.get('/', (req,res) => res.sendFile(path.join(__dirname,'views','index.html')))
@@ -13,7 +13,7 @@ app.get('/clarke', (req,res) => res.sendFile(path.join(__dirname,'views','clarke
 app.get('/hamilton', (req,res) => res.sendFile(path.join(__dirname,'views','hamilton.html')))
 app.get('/hopper', (req,res) => res.sendFile(path.join(__dirname,'views','hopper.html')))
 app.get('/turing', (req,res) => res.sendFile(path.join(__dirname,'views','turing.html')))
-app.get('/lovelance', (req,res) => res.sendFile(path.join(__dirname,'views','lovelance.html')))
+app.get('/lovelace', (req,res) => res.sendFile(path.join(__dirname,'views','lovelace.html')))
 
 
 app.listen(port, () => console.log("Servidor corriendo en http://localhost:" + port )) ;
